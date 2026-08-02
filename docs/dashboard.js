@@ -22,7 +22,6 @@ const tr=key=>translations[currentLang][key];
 function initialLanguage(){
   const query=new URLSearchParams(location.search).get("lang");
   if(query==="en"||query==="fr")return query;
-  try{const saved=localStorage.getItem("matNexusLanguage");if(saved==="en"||saved==="fr")return saved}catch{}
   return "en";
 }
 
@@ -61,7 +60,6 @@ function renderAll(){
 
 function setLanguage(language){
   currentLang=language;
-  try{localStorage.setItem("matNexusLanguage",language)}catch{}
   const url=new URL(location.href);url.searchParams.set("lang",language);history.replaceState(null,"",url);
   renderAll();
 }
@@ -69,7 +67,7 @@ function setLanguage(language){
 async function init(){
   currentLang=initialLanguage();renderAll();
   document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>setLanguage(button.dataset.lang)));
-  try{const response=await fetch("data/public-benchmark-catalog.json",{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);catalog=await response.json();renderAll()}catch(error){const status=document.querySelector("#data-status");status.classList.add("error");status.textContent=tr("dataError")(error.message)}
+  try{const response=await fetch("data/public-benchmark-catalog.json?v=3",{cache:"force-cache"});if(!response.ok)throw new Error(`HTTP ${response.status}`);catalog=await response.json();renderAll()}catch(error){const status=document.querySelector("#data-status");status.classList.add("error");status.textContent=tr("dataError")(error.message)}
 }
 
 init();

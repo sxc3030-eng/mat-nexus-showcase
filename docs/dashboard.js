@@ -67,7 +67,17 @@ function setLanguage(language){
 async function init(){
   currentLang=initialLanguage();renderAll();
   document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>setLanguage(button.dataset.lang)));
-  try{const response=await fetch("data/public-benchmark-catalog.json?v=3",{cache:"force-cache"});if(!response.ok)throw new Error(`HTTP ${response.status}`);catalog=await response.json();renderAll()}catch(error){const status=document.querySelector("#data-status");status.classList.add("error");status.textContent=tr("dataError")(error.message)}
+  try{
+    const dataUrl=new URL("data/public-benchmark-catalog.json?v=4",document.baseURI);
+    const response=await fetch(dataUrl,{cache:"no-store"});
+    if(!response.ok)throw new Error(`HTTP ${response.status}`);
+    catalog=await response.json();
+    renderAll();
+  }catch(error){
+    const status=document.querySelector("#data-status");
+    status.classList.add("error");
+    status.textContent=tr("dataError")(error.message);
+  }
 }
 
 init();

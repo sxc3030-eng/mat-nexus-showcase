@@ -1,0 +1,55 @@
+{
+  "schema_version": "mat-nexus-public-results-v1",
+  "scope": "fresh self-contained verifiable tasks; not a universal LLM benchmark",
+  "campaigns": [
+    {
+      "id": "nexus-safe-short-levels-v1",
+      "question_count": 18,
+      "models": {
+        "granite-3.3-2b-instruct": {
+          "raw_correct": 3,
+          "safe_correct": 18,
+          "wins": 15,
+          "losses": 0,
+          "classification": "GAIN",
+          "two_sided_exact_p_value": 0.00006103515625
+        },
+        "gemma3-12b-it-qat": {
+          "raw_correct": 3,
+          "safe_correct": 15,
+          "wins": 12,
+          "losses": 0,
+          "classification": "GAIN",
+          "two_sided_exact_p_value": 0.00048828125
+        }
+      },
+      "report_sha256": "554fc022f5f445927ce5f1ea5a24546a505865a359c82293940a9581c97e2aa4",
+      "audit_sha256": "758656d58407c1c08c9bc0005f453eaf2a9c6076e76d4a5276a80b768d2bdc17",
+      "audit_status": "PASS"
+    },
+    {
+      "id": "nexus-safe-three-model-micro-v1",
+      "question_count": 6,
+      "models": {
+        "llama3.1-8b": {
+          "raw_correct": 1,
+          "safe_correct": 6,
+          "wins": 5,
+          "losses": 0,
+          "classification": "INCONCLUSIVE",
+          "two_sided_exact_p_value": 0.0625
+        }
+      },
+      "report_sha256": "dc0c55cb8fe517128a79a039e4a9f34be85ff00cc9f7326225bd6bb4774a10f6",
+      "audit_sha256": "c50311824a2c7ae215af8f02a8b1e5f99c176483f7f877a69aaba2edccf5b801",
+      "audit_status": "PASS"
+    }
+  ],
+  "controls": {
+    "prior_test_response_reuse": false,
+    "sealed_test_used_for_training": false,
+    "automatic_learning": false,
+    "verified_answer_mutation": false,
+    "plain_questions_responses_or_targets_published": false
+  }
+}

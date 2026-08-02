@@ -24,7 +24,7 @@
       <p class="eyebrow">PUBLIC EVIDENCE DASHBOARD</p>
       <h1 data-i18n="heroTitle">A verified layer can help a small LLM — within a measurable domain.</h1>
       <p class="lede" data-i18n="heroLead">Paired comparisons on mechanically verifiable tasks. Diagnostics, pretests and invalidated campaigns are never pooled with primary evidence.</p>
-      <div class="status-line" id="data-status" role="status">Preparing audited charts…</div>
+      <div class="status-line" id="data-status" role="status">Static audited snapshot loaded · 4 primary comparisons · data 2026-08-02</div>
     </div>
   </header>
 
@@ -34,7 +34,11 @@
         <div><p class="eyebrow" data-i18n="primaryEyebrow">PRIMARY EVIDENCE</p><h2 id="headline-title" data-i18n="primaryTitle">LLM alone vs LLM + Nexus Safe</h2></div>
         <p data-i18n="primaryNote">Accuracy is directly labelled. No hover is required.</p>
       </div>
-      <div class="kpi-grid" id="kpis" aria-label="Indicateurs principaux"></div>
+      <div class="kpi-grid" id="kpis" aria-label="Indicateurs principaux">
+        <div class="kpi"><strong>47</strong><span>audited questions / questions auditées</span></div>
+        <div class="kpi"><strong>2/4</strong><span>comparisons classified as GAIN</span></div>
+        <div class="kpi"><strong>+68.1 pp</strong><span>descriptive aggregate gap</span></div>
+      </div>
       <div class="chart-panel">
         <div class="legend" aria-label="Legend"><span><i class="swatch raw"></i><span data-i18n="rawLabel">LLM alone</span></span><span><i class="swatch nexus"></i><span data-i18n="nexusLabel">LLM + Nexus Safe</span></span></div>
         <div id="paired-chart" class="paired-chart" aria-live="polite"></div>
@@ -46,7 +50,12 @@
         <div><p class="eyebrow" data-i18n="decisionEyebrow">PAIRED DECISION</p><h2 id="decision-title" data-i18n="decisionTitle">Gain, loss or inconclusive result</h2></div>
         <p data-i18n="decisionNote">A higher score is not enough: the decision accounts for discordant pairs and sample size.</p>
       </div>
-      <div class="decision-grid" id="decision-grid"></div>
+      <div class="decision-grid" id="decision-grid">
+        <article class="decision-card"><span class="badge GAIN">GAIN</span><h3>Granite 3.3 2B Instruct</h3><strong>15 wins · 0 losses</strong><p>Two-sided exact test: p=0.00006103515625. Status: AUDITED.</p></article>
+        <article class="decision-card"><span class="badge GAIN">GAIN</span><h3>Gemma 3 12B IT QAT</h3><strong>12 wins · 0 losses</strong><p>Two-sided exact test: p=0.00048828125. Status: AUDITED.</p></article>
+        <article class="decision-card"><span class="badge INCONCLUSIVE">INCONCLUSIVE</span><h3>Llama 3.1 8B</h3><strong>5 wins · 0 losses</strong><p>Two-sided exact test: p=0.0625. Status: AUDITED.</p></article>
+        <article class="decision-card"><span class="badge INCONCLUSIVE">INCONCLUSIVE</span><h3>Granite 3.3 2B Instruct · code</h3><strong>0 wins · 0 losses</strong><p>Two-sided exact test: p=1. Status: AUDITED_SMALL_SAMPLE.</p></article>
+      </div>
     </section>
 
     <section aria-labelledby="table-title">
@@ -58,7 +67,12 @@
         <table>
           <caption data-i18n="caption">Audited results published without questions, answers or targets.</caption>
           <thead><tr><th data-i18n="thModel">Model</th><th data-i18n="thDomain">Domain</th><th>n</th><th data-i18n="thAlone">Alone</th><th>Nexus</th><th>Δ</th><th data-i18n="thDecision">Decision</th><th data-i18n="thP">exact p</th></tr></thead>
-          <tbody id="results-body"></tbody>
+          <tbody id="results-body">
+            <tr><td>Granite 3.3 2B Instruct</td><td>mixed verifiable</td><td>18</td><td>3/18 (16.7 %)</td><td>18/18 (100 %)</td><td>+83.3 pp</td><td><span class="badge GAIN">GAIN</span></td><td>0.00006103515625</td></tr>
+            <tr><td>Gemma 3 12B IT QAT</td><td>mixed verifiable</td><td>18</td><td>3/18 (16.7 %)</td><td>15/18 (83.3 %)</td><td>+66.7 pp</td><td><span class="badge GAIN">GAIN</span></td><td>0.00048828125</td></tr>
+            <tr><td>Llama 3.1 8B</td><td>mixed verifiable</td><td>6</td><td>1/6 (16.7 %)</td><td>6/6 (100 %)</td><td>+83.3 pp</td><td><span class="badge INCONCLUSIVE">INCONCLUSIVE</span></td><td>0.0625</td></tr>
+            <tr><td>Granite 3.3 2B Instruct</td><td>code</td><td>5</td><td>1/5 (20 %)</td><td>1/5 (20 %)</td><td>+0.0 pp</td><td><span class="badge INCONCLUSIVE">INCONCLUSIVE</span></td><td>1</td></tr>
+          </tbody>
         </table>
       </div>
     </section>

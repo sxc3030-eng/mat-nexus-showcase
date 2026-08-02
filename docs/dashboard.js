@@ -68,6 +68,12 @@ async function init(){
   currentLang=initialLanguage();renderAll();
   document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>setLanguage(button.dataset.lang)));
   try{
+    const embedded=document.querySelector("#embedded-benchmark-catalog");
+    if(embedded){
+      catalog=JSON.parse(embedded.textContent);
+      renderAll();
+      return;
+    }
     const dataUrl=new URL("data/public-benchmark-catalog.json?v=4",document.baseURI);
     const response=await fetch(dataUrl,{cache:"no-store"});
     if(!response.ok)throw new Error(`HTTP ${response.status}`);

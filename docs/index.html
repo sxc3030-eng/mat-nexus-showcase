@@ -100,6 +100,27 @@
 
   <footer><p data-i18n="footer">MAT Nexus public portfolio edition · aggregate data, explicit public boundaries.</p></footer>
   <noscript><p class="noscript">JavaScript is required to generate charts. Data remains available as JSON and CSV.</p></noscript>
-  <script src="dashboard.js?v=4" defer></script>
+  <script id="embedded-benchmark-catalog" type="application/json">
+  {
+    "schema_version": "mat-nexus-public-benchmark-catalog-v1",
+    "generated_on": "2026-08-02",
+    "primary_comparisons": [
+      {"id":"short-18-granite","model":"Granite 3.3 2B Instruct","domain":"mixed_verifiable","questions":18,"raw_correct":3,"nexus_correct":18,"wins":15,"losses":0,"classification":"GAIN","two_sided_exact_p_value":0.00006103515625,"evidence_status":"AUDITED"},
+      {"id":"short-18-gemma","model":"Gemma 3 12B IT QAT","domain":"mixed_verifiable","questions":18,"raw_correct":3,"nexus_correct":15,"wins":12,"losses":0,"classification":"GAIN","two_sided_exact_p_value":0.00048828125,"evidence_status":"AUDITED"},
+      {"id":"micro-6-llama","model":"Llama 3.1 8B","domain":"mixed_verifiable","questions":6,"raw_correct":1,"nexus_correct":6,"wins":5,"losses":0,"classification":"INCONCLUSIVE","two_sided_exact_p_value":0.0625,"evidence_status":"AUDITED"},
+      {"id":"code-5-granite","model":"Granite 3.3 2B Instruct","domain":"code","questions":5,"raw_correct":1,"nexus_correct":1,"wins":0,"losses":0,"classification":"INCONCLUSIVE","two_sided_exact_p_value":1.0,"evidence_status":"AUDITED_SMALL_SAMPLE"}
+    ],
+    "diagnostic_campaigns": [
+      {"id":"nexus-four-arm-1000q-v1","questions":1000,"kind":"component_ablation","status":"HISTORICAL_DIAGNOSTIC","metrics":{"raw_accuracy":0.0,"prepared_accuracy":0.019,"experts_accuracy":0.812,"experts_memory_accuracy":0.905},"caveat":"Component ablation; not pooled with the current paired safe-layer benchmark."},
+      {"id":"nexus-adapter-ab-1000q-v1-safe","questions":1000,"kind":"adapter_nexus_ablation","status":"HISTORICAL_DIAGNOSTIC","metrics":{"base_raw_accuracy":0.0,"adapted_raw_accuracy":0.0,"base_nexus_accuracy":0.125,"adapted_nexus_accuracy":0.186},"caveat":"Useful for architecture diagnosis; raw-arm behavior makes it unsuitable as the headline gain claim."},
+      {"id":"full-circuit-all-functional-ab-v2-safe","questions":10,"kind":"controlled_preview","status":"EXPLORATORY","metrics":{"llm_alone_accuracy":0.0,"experts_raw_plus_llm_accuracy":0.0,"experts_prepared_plus_llm_accuracy":0.1},"caveat":"Controlled preview, explicitly not an official benchmark."}
+    ],
+    "excluded_campaigns": [
+      {"id":"nexus-neutral-10x20-v1","status":"INVALIDATED","reason":"Uniform 96-token ceiling truncated model outputs; 36 Granite cases were consumed and excluded from scoring."},
+      {"id":"nexus-neutral-10x20-v2","status":"RUNNING","reason":"Larger neutral paired campaign remains unpublished until completion and audit."}
+    ]
+  }
+  </script>
+  <script src="dashboard.js?v=5" defer></script>
 </body>
 </html>

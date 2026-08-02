@@ -11,6 +11,17 @@ LLM unchanged.
 > model weights, private evaluation data, and training pipeline are not part of
 > this repository.
 
+## Live evidence dashboard
+
+The public, mobile-friendly dashboard is generated from a versioned aggregate
+catalog. It separates audited paired comparisons from diagnostic, exploratory,
+running and invalidated campaigns.
+
+- [Open the dashboard](https://sxc3030-eng.github.io/mat-nexus-showcase/)
+- [Reusable JSON catalog](results/public-benchmark-catalog.json)
+- [Reusable CSV export](results/primary-comparisons.csv)
+- Validate and regenerate exports with `python tools/validate_catalog.py`
+
 ## The product hypothesis
 
 Small local models do not need another generative voice in every request. They

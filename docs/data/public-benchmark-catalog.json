@@ -1,0 +1,133 @@
+{
+  "schema_version": "mat-nexus-public-benchmark-catalog-v1",
+  "generated_on": "2026-08-02",
+  "scope": "Aggregate results only. Questions, answers, prompts, router tables and private implementation are excluded.",
+  "primary_comparisons": [
+    {
+      "id": "short-18-granite",
+      "campaign_id": "nexus-safe-short-levels-v1",
+      "model": "Granite 3.3 2B Instruct",
+      "domain": "mixed_verifiable",
+      "questions": 18,
+      "raw_correct": 3,
+      "nexus_correct": 18,
+      "wins": 15,
+      "losses": 0,
+      "classification": "GAIN",
+      "two_sided_exact_p_value": 0.00006103515625,
+      "evidence_status": "AUDITED",
+      "report_sha256": "554fc022f5f445927ce5f1ea5a24546a505865a359c82293940a9581c97e2aa4",
+      "audit_sha256": "758656d58407c1c08c9bc0005f453eaf2a9c6076e76d4a5276a80b768d2bdc17"
+    },
+    {
+      "id": "short-18-gemma",
+      "campaign_id": "nexus-safe-short-levels-v1",
+      "model": "Gemma 3 12B IT QAT",
+      "domain": "mixed_verifiable",
+      "questions": 18,
+      "raw_correct": 3,
+      "nexus_correct": 15,
+      "wins": 12,
+      "losses": 0,
+      "classification": "GAIN",
+      "two_sided_exact_p_value": 0.00048828125,
+      "evidence_status": "AUDITED",
+      "report_sha256": "554fc022f5f445927ce5f1ea5a24546a505865a359c82293940a9581c97e2aa4",
+      "audit_sha256": "758656d58407c1c08c9bc0005f453eaf2a9c6076e76d4a5276a80b768d2bdc17"
+    },
+    {
+      "id": "micro-6-llama",
+      "campaign_id": "nexus-safe-three-model-micro-v1",
+      "model": "Llama 3.1 8B",
+      "domain": "mixed_verifiable",
+      "questions": 6,
+      "raw_correct": 1,
+      "nexus_correct": 6,
+      "wins": 5,
+      "losses": 0,
+      "classification": "INCONCLUSIVE",
+      "two_sided_exact_p_value": 0.0625,
+      "evidence_status": "AUDITED",
+      "report_sha256": "dc0c55cb8fe517128a79a039e4a9f34be85ff00cc9f7326225bd6bb4774a10f6",
+      "audit_sha256": "c50311824a2c7ae215af8f02a8b1e5f99c176483f7f877a69aaba2edccf5b801"
+    },
+    {
+      "id": "code-5-granite",
+      "campaign_id": "mat9f-code-e2e-raw-vs-nexus-v1",
+      "model": "Granite 3.3 2B Instruct",
+      "domain": "code",
+      "questions": 5,
+      "raw_correct": 1,
+      "nexus_correct": 1,
+      "wins": 0,
+      "losses": 0,
+      "classification": "INCONCLUSIVE",
+      "two_sided_exact_p_value": 1.0,
+      "evidence_status": "AUDITED_SMALL_SAMPLE",
+      "report_sha256": "69db61ec98a2e5c445833f00be8127b1327effc13ce8194ce9e05de6cd7a095e",
+      "audit_sha256": null
+    }
+  ],
+  "diagnostic_campaigns": [
+    {
+      "id": "nexus-four-arm-1000q-v1",
+      "questions": 1000,
+      "kind": "component_ablation",
+      "status": "HISTORICAL_DIAGNOSTIC",
+      "metrics": {
+        "raw_accuracy": 0.0,
+        "prepared_accuracy": 0.019,
+        "experts_accuracy": 0.812,
+        "experts_memory_accuracy": 0.905
+      },
+      "report_sha256": "e3e23ada5f197b14ccdbfe542e791033fe6d564a22ed06b08f907bc906ff5c64",
+      "caveat": "Component ablation; not pooled with the current paired safe-layer benchmark."
+    },
+    {
+      "id": "nexus-adapter-ab-1000q-v1-safe",
+      "questions": 1000,
+      "kind": "adapter_nexus_ablation",
+      "status": "HISTORICAL_DIAGNOSTIC",
+      "metrics": {
+        "base_raw_accuracy": 0.0,
+        "adapted_raw_accuracy": 0.0,
+        "base_nexus_accuracy": 0.125,
+        "adapted_nexus_accuracy": 0.186
+      },
+      "report_sha256": "14bb4052eb05de8580231c491ca7db7444a365ec813c7de235b3f73632f8a22f",
+      "caveat": "Useful for architecture diagnosis; raw-arm behavior makes it unsuitable as the headline gain claim."
+    },
+    {
+      "id": "full-circuit-all-functional-ab-v2-safe",
+      "questions": 10,
+      "kind": "controlled_preview",
+      "status": "EXPLORATORY",
+      "metrics": {
+        "llm_alone_accuracy": 0.0,
+        "experts_raw_plus_llm_accuracy": 0.0,
+        "experts_prepared_plus_llm_accuracy": 0.1
+      },
+      "report_sha256": "260f583eec371f6b1242d4fbb48b9c9056daf90bc8a2e431c7b9aa6b543cd822",
+      "caveat": "Controlled preview, explicitly not an official benchmark."
+    }
+  ],
+  "excluded_campaigns": [
+    {
+      "id": "nexus-neutral-10x20-v1",
+      "status": "INVALIDATED",
+      "reason": "Uniform 96-token ceiling truncated model outputs; 36 Granite cases were consumed and excluded from scoring."
+    },
+    {
+      "id": "nexus-neutral-10x20-v2",
+      "status": "RUNNING",
+      "reason": "Larger neutral paired campaign remains unpublished until completion and audit."
+    }
+  ],
+  "controls": {
+    "previous_test_answers_reused": false,
+    "sealed_test_used_for_training": false,
+    "automatic_learning_during_evaluation": false,
+    "raw_questions_or_targets_published": false,
+    "primary_and_diagnostic_results_pooled": false
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Résultats publics et auditables de MAT Nexus sur des tâches à vérité vérifiable.">
+  <title>MAT Nexus — résultats publics</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller aux résultats</a>
+  <header class="hero">
+    <nav aria-label="Navigation principale">
+      <a class="brand" href="../">MAT Nexus</a>
+      <a href="https://github.com/sxc3030-eng/mat-nexus-showcase">Dépôt GitHub</a>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow">PUBLIC EVIDENCE DASHBOARD</p>
+      <h1>Une couche vérifiée peut aider un petit LLM — dans son domaine mesurable.</h1>
+      <p class="lede">Comparaisons pairées sur des tâches à réponse mécaniquement vérifiable. Les diagnostics, prétests et campagnes invalidées ne sont jamais mélangés aux preuves principales.</p>
+      <div class="status-line" id="data-status" role="status">Chargement des données auditées…</div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="headline-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">PREUVES PRINCIPALES</p><h2 id="headline-title">LLM seul vs LLM + Nexus sûr</h2></div>
+        <p>Exactitude, directement étiquetée. Aucun survol requis.</p>
+      </div>
+      <div class="kpi-grid" id="kpis" aria-label="Indicateurs principaux"></div>
+      <div class="chart-panel">
+        <div class="legend" aria-label="Légende"><span><i class="swatch raw"></i>LLM seul</span><span><i class="swatch nexus"></i>LLM + Nexus sûr</span></div>
+        <div id="paired-chart" class="paired-chart" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="decision-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">DÉCISION PAIRÉE</p><h2 id="decision-title">Gain, perte ou résultat non concluant</h2></div>
+        <p>La hausse du score ne suffit pas : la décision tient compte des paires discordantes et de la taille de l’échantillon.</p>
+      </div>
+      <div class="decision-grid" id="decision-grid"></div>
+    </section>
+
+    <section aria-labelledby="table-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">DONNÉES PORTABLES</p><h2 id="table-title">Table complète des comparaisons principales</h2></div>
+        <p><a href="../results/public-benchmark-catalog.json">JSON</a> · <a href="../results/primary-comparisons.csv">CSV</a></p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Résultats audités publiés sans questions, réponses ni cibles.</caption>
+          <thead><tr><th>Modèle</th><th>Domaine</th><th>n</th><th>Seul</th><th>Nexus</th><th>Δ</th><th>Décision</th><th>p exacte</th></tr></thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="audit-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">REGISTRE D’AUDIT</p><h2 id="audit-title">Ce qui est informatif sans devenir une promesse</h2></div>
+        <p>Ces campagnes restent visibles, mais sont exclues des moyennes principales.</p>
+      </div>
+      <div class="audit-grid" id="audit-grid"></div>
+      <h3>Campagnes exclues ou en cours</h3>
+      <div class="excluded-list" id="excluded-list"></div>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <p class="eyebrow">LECTURE CORRECTE</p>
+      <h2 id="method-title">Ce que ces chiffres disent — et ne disent pas</h2>
+      <div class="method-grid">
+        <p><strong>Ils montrent</strong> un gain reproductible sur certains problèmes à vérité vérifiable, lorsque Nexus possède un exécuteur ou un vérificateur approprié.</p>
+        <p><strong>Ils ne montrent pas</strong> une amélioration universelle du raisonnement, de la créativité, du code ou des connaissances ouvertes.</p>
+        <p><strong>Règle de publication</strong> : aucune réponse déjà observée n’est réutilisée pour noter une nouvelle campagne; les jeux scellés ne servent pas à l’entraînement.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>MAT Nexus public portfolio edition · données agrégées, frontières publiques explicites.</p></footer>
+  <noscript><p class="noscript">JavaScript est requis pour générer les graphiques. Les données restent disponibles en JSON et CSV.</p></noscript>
+  <script src="dashboard.js" defer></script>
+</body>
+</html>

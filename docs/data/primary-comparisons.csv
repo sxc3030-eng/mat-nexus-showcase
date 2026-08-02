@@ -1,0 +1,5 @@
+id,campaign_id,model,domain,questions,raw_correct,nexus_correct,wins,losses,classification,two_sided_exact_p_value,evidence_status
+short-18-granite,nexus-safe-short-levels-v1,Granite 3.3 2B Instruct,mixed_verifiable,18,3,18,15,0,GAIN,6.103515625e-05,AUDITED
+short-18-gemma,nexus-safe-short-levels-v1,Gemma 3 12B IT QAT,mixed_verifiable,18,3,15,12,0,GAIN,0.00048828125,AUDITED
+micro-6-llama,nexus-safe-three-model-micro-v1,Llama 3.1 8B,mixed_verifiable,6,1,6,5,0,INCONCLUSIVE,0.0625,AUDITED
+code-5-granite,mat9f-code-e2e-raw-vs-nexus-v1,Granite 3.3 2B Instruct,code,5,1,1,0,0,INCONCLUSIVE,1.0,AUDITED_SMALL_SAMPLE

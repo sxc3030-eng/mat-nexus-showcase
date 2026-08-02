@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "results" / "public-benchmark-catalog.json"
 CSV_PATH = ROOT / "results" / "primary-comparisons.csv"
 PAGES_DATA = ROOT / "docs" / "data" / "public-benchmark-catalog.json"
+PAGES_CSV = ROOT / "docs" / "data" / "primary-comparisons.csv"
 
 
 def load_catalog(path: Path = CATALOG) -> dict:
@@ -69,6 +70,7 @@ def write_pages_data(data: dict, path: Path = PAGES_DATA) -> None:
     # Pages serves the exact same audited artifact as the reusable catalog.
     # Byte-for-byte identity makes drift detectable with a single SHA-256.
     path.write_bytes(CATALOG.read_bytes())
+    PAGES_CSV.write_bytes(CSV_PATH.read_bytes())
 
 
 def main() -> int:

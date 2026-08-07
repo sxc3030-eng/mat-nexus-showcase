@@ -59,6 +59,18 @@ The Llama sample is intentionally labelled inconclusive because six questions
 are insufficient for a strong statistical claim. Full report and audit hashes
 are preserved in [`results/validated-summary.json`](results/validated-summary.json).
 
+### Hugging Face Jobs: pilot to confirmation
+
+![Granite 3.3 2B pilot and 100-question confirmation](docs/assets/hf-jobs-granite-two-stage-github-en.svg)
+
+The fresh 100-question confirmation measured **22% for Granite alone** and
+**51% with the verified deterministic expert layer**: +29 percentage points,
+29 paired wins, 0 losses and 71 ties (exact McNemar `p = 3.7e-9`). This result
+supports the expert layer on this selection; it does **not** establish a
+separate Nexus increment, and MATmem was not exercised. The aggregate source,
+report links and hashes are preserved in
+[`results/hf-jobs-granite-two-stage-summary.json`](results/hf-jobs-granite-two-stage-summary.json).
+
 ## What is demonstrated here
 
 - deterministic expert trial instead of speculative expert routing;

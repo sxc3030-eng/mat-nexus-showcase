@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">MAT Nexus pilot and 100-question confirmation</title>
+  <desc id="description">Granite 3.3 2B improves from 22% to 51% with a verified deterministic expert layer on 100 official lm-eval questions.</desc>
+  <rect width="1600" height="900" fill="#061813"/>
+  <style>
+    text { font-family: Inter, Segoe UI, Arial, sans-serif; fill: #f4fff9; }
+    .label { font-size: 18px; font-weight: 500; letter-spacing: 2.2px; }
+    .title { font-size: 58px; font-weight: 500; }
+    .subtitle { font-size: 23px; fill: #abd0c1; }
+    .section { font-size: 24px; font-weight: 500; }
+    .bar-label { font-size: 21px; }
+    .bar-value { font-size: 22px; font-weight: 500; }
+    .metric { font-size: 38px; font-weight: 500; }
+    .detail { font-size: 18px; fill: #abd0c1; }
+    .tiny { font-size: 15px; fill: #abd0c1; }
+  </style>
+
+  <text class="label" x="58" y="58" fill="#43e2a3">MAT NEXUS · HUGGING FACE JOBS EVIDENCE</text>
+  <g transform="translate(1378 26)"><rect width="164" height="54" rx="15" fill="#0f352a" stroke="#215846"/><text x="82" y="23" text-anchor="middle" font-size="15" font-weight="500">GPT-5 CODEX</text><text x="82" y="42" text-anchor="middle" class="tiny">SYNTHESIS</text></g>
+  <text class="title" x="58" y="130">A pilot found the signal.</text>
+  <text class="title" x="58" y="194">100 questions confirmed it.</text>
+  <text class="subtitle" x="58" y="233">Granite 3.3 2B · official lm-eval tasks · fresh target-blind samples</text>
+
+  <rect x="58" y="278" width="700" height="250" rx="24" fill="#0b2a21" stroke="#215846" stroke-width="2"/>
+  <text class="label" x="88" y="318" fill="#ffc967">TEST 1 · PILOT · n=8</text>
+  <text class="bar-label" x="88" y="360">LLM alone</text>
+  <rect x="88" y="370" width="390" height="28" rx="14" fill="#173c31"/>
+  <rect x="88" y="370" width="97.5" height="28" rx="14" fill="#9bb2aa"/>
+  <text class="bar-value" x="496" y="392">25%</text>
+  <text class="bar-label" x="88" y="428">Verified expert layer</text>
+  <rect x="88" y="438" width="390" height="28" rx="14" fill="#173c31"/>
+  <rect x="88" y="438" width="292.5" height="28" rx="14" fill="#43e2a3"/>
+  <text class="bar-value" x="496" y="460">75%</text>
+  <text class="metric" x="650" y="392" text-anchor="middle" fill="#43e2a3">+50 pp</text>
+  <text class="detail" x="650" y="432" text-anchor="middle">4 wins · 0 losses</text>
+  <text x="650" y="472" text-anchor="middle" font-size="17" fill="#ffc967">p=.125 · inconclusive</text>
+
+  <rect x="58" y="558" width="700" height="260" rx="24" fill="#0f352a" stroke="#43e2a3" stroke-width="2"/>
+  <text class="label" x="88" y="598" fill="#43e2a3">TEST 2 · CONFIRMATION · n=100</text>
+  <text class="bar-label" x="88" y="640">LLM alone</text>
+  <rect x="88" y="650" width="390" height="28" rx="14" fill="#173c31"/>
+  <rect x="88" y="650" width="85.8" height="28" rx="14" fill="#9bb2aa"/>
+  <text class="bar-value" x="496" y="672">22%</text>
+  <text class="bar-label" x="88" y="708">Verified expert layer</text>
+  <rect x="88" y="718" width="390" height="28" rx="14" fill="#173c31"/>
+  <rect x="88" y="718" width="198.9" height="28" rx="14" fill="#43e2a3"/>
+  <text class="bar-value" x="496" y="740">51%</text>
+  <text class="metric" x="650" y="672" text-anchor="middle" fill="#43e2a3">+29 pp</text>
+  <text class="detail" x="650" y="712" text-anchor="middle">29 wins · 0 losses</text>
+  <text x="635" y="752" text-anchor="middle" font-size="15" fill="#43e2a3">p=3.7×10⁻⁹ · paired gain</text>
+
+  <text class="section" x="825" y="310">Confirmation by task</text>
+  <rect x="1210" y="291" width="14" height="14" rx="7" fill="#9bb2aa"/><text class="tiny" x="1234" y="304">LLM alone</text>
+  <rect x="1360" y="291" width="14" height="14" rx="7" fill="#43e2a3"/><text class="tiny" x="1384" y="304">with layer</text>
+  <text class="bar-label" x="825" y="375">BBH multistep arithmetic</text>
+  <text class="tiny" x="825" y="400">n=25</text>
+  <rect x="1150" y="357" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="357" width="2" height="18" rx="9" fill="#9bb2aa"/>
+  <rect x="1150" y="387" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="387" width="330" height="18" rx="9" fill="#43e2a3"/>
+  <text class="tiny" x="1494" y="371">0%</text>
+  <text class="tiny" x="1494" y="402">100%</text>
+  <text class="bar-value" x="1525" y="388" text-anchor="end" fill="#43e2a3">+100 pp</text>
+  <text class="bar-label" x="825" y="470">BBH date understanding</text>
+  <text class="tiny" x="825" y="495">n=25</text>
+  <rect x="1150" y="452" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="452" width="2" height="18" rx="9" fill="#9bb2aa"/>
+  <rect x="1150" y="482" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="482" width="52.800000000000004" height="18" rx="9" fill="#43e2a3"/>
+  <text class="tiny" x="1494" y="466">0%</text>
+  <text class="tiny" x="1494" y="497">16%</text>
+  <text class="bar-value" x="1525" y="483" text-anchor="end" fill="#43e2a3">+16 pp</text>
+  <text class="bar-label" x="825" y="565">GSM8K</text>
+  <text class="tiny" x="825" y="590">n=25</text>
+  <rect x="1150" y="547" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="547" width="198" height="18" rx="9" fill="#9bb2aa"/>
+  <rect x="1150" y="577" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="577" width="198" height="18" rx="9" fill="#43e2a3"/>
+  <text class="tiny" x="1494" y="561">60%</text>
+  <text class="tiny" x="1494" y="592">60%</text>
+  <text class="bar-value" x="1525" y="578" text-anchor="end" fill="#abd0c1">0 pp</text>
+  <text class="bar-label" x="825" y="660">TriviaQA</text>
+  <text class="tiny" x="825" y="685">n=25</text>
+  <rect x="1150" y="642" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="642" width="92.4" height="18" rx="9" fill="#9bb2aa"/>
+  <rect x="1150" y="672" width="330" height="18" rx="9" fill="#173c31"/>
+  <rect x="1150" y="672" width="92.4" height="18" rx="9" fill="#43e2a3"/>
+  <text class="tiny" x="1494" y="656">28%</text>
+  <text class="tiny" x="1494" y="687">28%</text>
+  <text class="bar-value" x="1525" y="673" text-anchor="end" fill="#abd0c1">0 pp</text>
+  <line x1="825" y1="720" x2="1542" y2="720" stroke="#215846" stroke-width="2"/>
+  <text class="tiny" x="825" y="754">Supported: verified deterministic expert layer, +29 pp, zero paired regressions.</text>
+  <text class="tiny" x="825" y="782">Not established: separate Nexus gain = 0 pp; MATmem was not exercised.</text>
+  <text class="tiny" x="825" y="810">Official prompts, filters and scorers unchanged · no target reuse · no automatic learning.</text>
+  <text x="1542" y="856" text-anchor="end" font-size="15" fill="#70b9ff">github.com/sxc3030-eng/mat-nexus-showcase</text>
+</svg>

@@ -1,0 +1,81 @@
+{
+  "schema_version": "mat-nexus-public-two-stage-evidence-v1",
+  "published_at": "2026-08-07",
+  "model": "IBM Granite 3.3 2B Instruct",
+  "execution_platform": "Hugging Face Jobs",
+  "evaluation_framework": "EleutherAI lm-evaluation-harness 0.4.3",
+  "comparison": "LLM alone vs LLM + verified deterministic expert layer",
+  "pilot": {
+    "n": 8,
+    "direct_accuracy": 0.25,
+    "layer_accuracy": 0.75,
+    "delta_percentage_points": 50.0,
+    "paired_wins": 4,
+    "paired_losses": 0,
+    "paired_ties": 4,
+    "mcnemar_exact_p": 0.125,
+    "decision": "inconclusive_small_sample",
+    "report_url": "https://huggingface.co/datasets/genia-dev/mat-nexus-hf-evals/blob/main/hf-jobs-granite-nexus-pilot-v1/final-report.json",
+    "report_sha256": "118a0006ef96b1c998bbdf36fcca8fa45ddd514a26b964c9a1142d4dcd35abf6"
+  },
+  "confirmation": {
+    "n": 100,
+    "direct_accuracy": 0.22,
+    "layer_accuracy": 0.51,
+    "delta_percentage_points": 29.0,
+    "paired_wins": 29,
+    "paired_losses": 0,
+    "paired_ties": 71,
+    "mcnemar_exact_p": 3.725290298461914e-9,
+    "decision": "gain_on_this_selection",
+    "tasks": [
+      {
+        "name": "BBH multistep arithmetic",
+        "n": 25,
+        "direct_accuracy": 0.0,
+        "layer_accuracy": 1.0,
+        "delta_percentage_points": 100.0
+      },
+      {
+        "name": "BBH date understanding",
+        "n": 25,
+        "direct_accuracy": 0.0,
+        "layer_accuracy": 0.16,
+        "delta_percentage_points": 16.0
+      },
+      {
+        "name": "GSM8K",
+        "n": 25,
+        "direct_accuracy": 0.60,
+        "layer_accuracy": 0.60,
+        "delta_percentage_points": 0.0
+      },
+      {
+        "name": "TriviaQA",
+        "n": 25,
+        "direct_accuracy": 0.28,
+        "layer_accuracy": 0.28,
+        "delta_percentage_points": 0.0
+      }
+    ],
+    "job_url": "https://huggingface.co/jobs/genia-dev/6a75fbfd3e1f34a7e32bd706",
+    "report_url": "https://huggingface.co/datasets/genia-dev/mat-nexus-hf-evals/blob/main/hf-jobs-granite-nexus-confirmation-100q-v1/final-report.json",
+    "report_sha256": "d875178ecf7cde3f9e107ab165afec91e9a73308d7b02cde0e2bc83e2de2de88",
+    "selection_sha256": "c31bbf08256137daf84df625d14124e36742b317bdea0863e9441c5ec6ff9c38"
+  },
+  "methodology": {
+    "fresh_questions": true,
+    "target_blind": true,
+    "official_prompts_filters_scorers_unchanged": true,
+    "sealed_test_used_for_training": false,
+    "automatic_learning": false
+  },
+  "claim_boundary": {
+    "supported": "The verified deterministic expert layer improved paired accuracy by 29 percentage points with zero paired regressions on this 100-question selection.",
+    "not_supported": "This run does not establish a separate Nexus increment, and MATmem was not exercised.",
+    "nexus_increment_percentage_points": 0.0,
+    "matmem_increment_percentage_points": 0.0,
+    "matmem_exercised": false
+  },
+  "attribution": "Report synthesized and visualized with GPT-5 Codex."
+}

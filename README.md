@@ -59,6 +59,18 @@ The Llama sample is intentionally labelled inconclusive because six questions
 are insufficient for a strong statistical claim. Full report and audit hashes
 are preserved in [`results/validated-summary.json`](results/validated-summary.json).
 
+### Hugging Face Jobs: pilot to confirmation
+
+![Granite 3.3 2B pilot and 100-question confirmation](docs/assets/hf-jobs-granite-two-stage-github-en.svg)
+
+The fresh 100-question confirmation measured **22% for Granite alone** and
+**51% with the verified deterministic expert layer**: +29 percentage points,
+29 paired wins, 0 losses and 71 ties (exact McNemar `p = 3.7e-9`). This result
+supports the expert layer on this selection; it does **not** establish a
+separate Nexus increment, and MATmem was not exercised. The aggregate source,
+report links and hashes are preserved in
+[`results/hf-jobs-granite-two-stage-summary.json`](results/hf-jobs-granite-two-stage-summary.json).
+
 ## What is demonstrated here
 
 - deterministic expert trial instead of speculative expert routing;
@@ -100,8 +112,15 @@ See [`PUBLIC-BOUNDARY.md`](PUBLIC-BOUNDARY.md) for the complete disclosure polic
 
 ## Status
 
-Experimental pre-release. A larger neutral campaign across Granite, Gemma, and
-Llama is running; its results will be added only after completion and audit.
+Experimental pre-release. V7 Preview is packaged and its focused release suite
+passes 52/52 tests, but no official V7 gain claim is available yet. The next
+fresh paired campaign isolates the expert-team effect (`LLM alone` versus the
+same LLM with 3–6 qualified experts); Nexus orchestration will be scored
+separately afterward.
+
+- [V7 evidence reset — English](posts/v7-evidence-reset-en.md)
+- [Remise à zéro des preuves V7 — français](posts/v7-evidence-reset-fr.md)
+- [Machine-readable V7 evidence status](results/v7-evidence-status.json)
 
 ---
 

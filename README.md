@@ -95,7 +95,7 @@ local-first conversation and code workspace with:
 
 Nexus MoE will remain proprietary. This showcase does not grant a licence to
 the private engine, experts, model adapters or distribution package. A Windows
-Preview is available from the [official releases page](https://github.com/sxc3030-eng/mat-nexus-showcase/releases/latest).
+Preview is available from the [official Preview 0.9.1 release](https://github.com/sxc3030-eng/mat-nexus-showcase/releases/tag/nexus-moe-preview-0.9.1).
 It is not Authenticode-signed, so verify the published SHA-256 before installing.
 
 See [`docs/PRODUCT-ROADMAP.md`](docs/PRODUCT-ROADMAP.md) for the release gates

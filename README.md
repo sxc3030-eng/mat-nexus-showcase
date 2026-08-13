@@ -80,6 +80,27 @@ units, Boolean logic, constrained transformations, statistics, and executable
 contracts. Knowledge-heavy and subjective tasks should normally bypass the
 expert layer until an independent verifier exists.
 
+## Nexus MoE product direction
+
+**Nexus MoE** is the planned downloadable product built on the MAT Nexus
+architecture. The private Windows application is being developed as a
+local-first conversation and code workspace with:
+
+- streaming responses and local model selection;
+- explicit expert attribution, proof and refusal records;
+- resumable qualification and benchmark gates before expert activation;
+- a future mobile companion connected securely to the user's own computer;
+- an optional, clearly labelled travel-offers panel isolated from prompts,
+  responses, source code, files, memories and expert-routing telemetry.
+
+Nexus MoE will remain proprietary. This showcase does not grant a licence to
+the private engine, experts, model adapters or distribution package. A Windows
+Preview is available from the [official releases page](https://github.com/sxc3030-eng/mat-nexus-showcase/releases/latest).
+It is not Authenticode-signed, so verify the published SHA-256 before installing.
+
+See [`docs/PRODUCT-ROADMAP.md`](docs/PRODUCT-ROADMAP.md) for the release gates
+and advertising privacy boundary.
+
 ## Public/private boundary
 
 Published:

@@ -94,9 +94,9 @@ local-first conversation and code workspace with:
   responses, source code, files, memories and expert-routing telemetry.
 
 Nexus MoE will remain proprietary. This showcase does not grant a licence to
-the private engine, experts, model adapters or distribution package. A download
-will be linked here only after signing, privacy review and release qualification
-are complete.
+the private engine, experts, model adapters or distribution package. A Windows
+Preview is available from the [official releases page](https://github.com/sxc3030-eng/mat-nexus-showcase/releases/latest).
+It is not Authenticode-signed, so verify the published SHA-256 before installing.
 
 See [`docs/PRODUCT-ROADMAP.md`](docs/PRODUCT-ROADMAP.md) for the release gates
 and advertising privacy boundary.

@@ -1,0 +1,59 @@
+{
+  "schema_version": "mat-nexus-public-v7-evidence-status-v1",
+  "as_of_date": "2026-08-06",
+  "release": {
+    "product_version": "0.9.0",
+    "label": "V7 Preview",
+    "focused_release_tests_passed": 52,
+    "focused_release_tests_total": 52,
+    "official_v7_gain_claim_available": false
+  },
+  "historical_controlled_internal": {
+    "publishable_as_official_general_benchmark": false,
+    "reason": "Template-controlled internal corpus",
+    "question_count": 800,
+    "granite_direct": {
+      "correct": 51,
+      "accuracy": 0.06375
+    },
+    "expert_routing": {
+      "correct": 648,
+      "accuracy": 0.81
+    },
+    "adaptive_nexus": {
+      "correct": 698,
+      "accuracy": 0.8725
+    },
+    "deterministic_executor": {
+      "correct": 800,
+      "accuracy": 1.0
+    }
+  },
+  "invalidated_external_attempt": {
+    "benchmark": "AgentDojo",
+    "selected_cases": 40,
+    "raw_cases_completed_before_failure": 5,
+    "nexus_cases_started": 0,
+    "configured_context_tokens": 8192,
+    "failing_input_tokens": 8670,
+    "accuracy_available": false,
+    "paired_decision": "INVALID"
+  },
+  "fresh_official_source": {
+    "benchmark": "tau3",
+    "source_commit": "a51cedb30a292896e7aff9a67c9f6dcbc4a29cd3",
+    "core_task_count": 278,
+    "consumed_cases": 0,
+    "test_selection_created": false
+  },
+  "next_primary_comparison": {
+    "baseline": "LLM alone",
+    "treatment": "same LLM plus sparse qualified expert team",
+    "expert_team_size_min": 3,
+    "expert_team_size_max": 6,
+    "fresh_sealed_cases_required": true,
+    "paired_scoring_required": true,
+    "nexus_orchestration_scored_separately": true
+  }
+}
+
